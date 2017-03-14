@@ -168,8 +168,8 @@ Do not allow direct access to the application, but only through nginx.
 # ...
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
-iptables -A INPUT -p tcp -m tcp -s localhost --dport 9081 -j ACCEPT
-iptables -A INPUT -p tcp -m tcp --dport 9081 -j DROP
+iptables -A INPUT -p tcp -m tcp -s localhost --dport 8081 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 8081 -j DROP
 # ...
 ```
 
